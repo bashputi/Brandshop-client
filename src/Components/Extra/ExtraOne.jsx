@@ -2,7 +2,7 @@
 
 const ExtraOne = () => {
     return (
-        <div className=" h-[80vh] flex justify-center items-center">
+        <div className=" lg:h-[70vh] flex justify-center items-center">
            <div className="">
            <div className="max-w-[99vw]">
                 <img className="mx-auto mb-2" src="https://i.ibb.co/Cwbhw1c/2023-18.png" alt="Extra logo" />

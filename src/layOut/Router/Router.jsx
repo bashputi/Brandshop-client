@@ -4,6 +4,8 @@ import NotFound from "../Pages/NotFound";
 import Home from "../Pages/Home";
 import Register from "../../Components/Register";
 import Login from "../../Components/Login";
+import PrivateRoute from "../PrivateRoute";
+import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
 
 
 const myRouter = createBrowserRouter([
@@ -14,7 +16,13 @@ const myRouter = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: () => fetch('/brand.json')
+            },
+            {
+                path: '/service/:id',
+                element: <PrivateRoute><ServiceDetails></ServiceDetails> </PrivateRoute> ,
+                loader: () => fetch('/brand.json')
             },
             {
                 path: '/register',
