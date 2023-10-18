@@ -2,7 +2,7 @@
 
 const Extra = () => {
     return (
-        <div>
+        <div className="lg:mt-16">
             <div className="max-w-[99vw]">
                 <img className="mx-auto mb-2" src="https://i.ibb.co/Cwbhw1c/2023-18.png" alt="Extra logo" />
              <h1 className="text-center font-https://i.ibb.co/Cwbhw1c/2023-18.pngbold text-5xl">Our Advantages</h1>
