@@ -37,16 +37,16 @@ const Navbar = () => {
                     user ? <>
                           <div>
                             <div className="dropdown">
-                            <label tabIndex={0} className="btn btn-ghost btn-circle">
-                               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+                            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+                               <svg xmlns="http://www.w3.org/2000/svg" className="h-2 w-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
                             </label>
                             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] bg-base-100 rounded-box w-20">
-                                <span>{user.displayName}</span><span><img className="rounded-full w-8" src={user.photoURL} /></span>
+                                <span>{user.displayName}<img className="rounded-full w-8" src={user.photoURL} /></span>
                                </ul>
                             </div>
                             <div className="navbar-center hidden lg:flex">
                                 <ul className="menu menu-horizontal px-1">
-                                <span className="mr-2 mt-5">{user.displayName}</span> <span> <img className="rounded-full w-14 mb-5 px-2" src={user.photoURL}/></span>
+                                <span className="-mt-2">{user.displayName}</span> <span> <img className="rounded-full w-14 mb-5 px-2" src={user.photoURL}/></span>
                                 </ul>
                             </div>
                             </div>

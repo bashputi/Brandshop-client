@@ -13,9 +13,10 @@ const Register = () => {
     const handleRegister = e => {
         e.preventDefault();
         const name = e.target.name.value;
+        const img = e.target.img.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        const img = e.target.img.value;
+        
 
         if (password.length < 6) {
             setRegisterError('password is less then 6 charecters')
@@ -77,7 +78,7 @@ const Register = () => {
                         <label className="label">
                             <span className="label-text">Image URL</span>
                         </label>
-                        <input type="text" placeholder="Provide a image url" className="input input-bordered" required />
+                        <input type="text" name="img" placeholder="Provide a image url" className="input input-bordered" required />
                         </div>
                         <div className="form-control mt-6">
                         <button className="btn btn-primary">Register</button>
