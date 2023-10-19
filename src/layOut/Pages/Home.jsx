@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import Extra from "../../Components/Extra/Extra";
+import Extra from "../../Components/Extra/Extra"; 
 import ExtraOne from "../../Components/Extra/ExtraOne";
 import Footer from "../../Components/Footer";
 import Banner from "../../Components/Header/Banner";
@@ -10,10 +10,10 @@ const Home = () => {
     const services = useLoaderData();
     return (
         <div>
-            <Banner></Banner>
-            <Extra></Extra>
+            {/* <Banner></Banner>  */}
+            {/* <Extra></Extra>  */}
             <Services services={services}></Services>
-            <ExtraOne></ExtraOne>
+            {/* <ExtraOne></ExtraOne>  */}
             <Footer></Footer>
         </div>
     );

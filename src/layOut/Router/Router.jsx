@@ -7,6 +7,9 @@ import Login from "../../Components/Login";
 import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
 import AddProduct from "../Pages/AddProduct";
 import PrivateRoute from "../PrivateRoute";
+import MyCart from "../Pages/MyCart";
+import DisplayBrand from "../../server/displayBrand/DisplayBrand";
+import Update from "../../server/Update";
 
 
 const myRouter = createBrowserRouter([
@@ -22,8 +25,7 @@ const myRouter = createBrowserRouter([
             },
             {
                 path: '/service/:id',
-                element: <ServiceDetails></ServiceDetails> ,
-                loader: () => fetch('/brand.json')
+                element: <ServiceDetails></ServiceDetails> 
             },
             {
                 path: '/register',
@@ -36,6 +38,20 @@ const myRouter = createBrowserRouter([
             {
                 path: '/addProduct',
                 element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
+            },
+            {
+                path: '/mycart',
+                element: <PrivateRoute><MyCart></MyCart></PrivateRoute>
+            },
+            {
+                path: '/service',
+                element: <DisplayBrand></DisplayBrand>,
+                loader: () => fetch(`http://localhost:5001/brands`)
+            },
+            {
+                path: '/service/update/:id',
+                element: <Update></Update>,
+                loader: ({params}) => fetch(`http://localhost:5001/brands/${params.id}`)
             }
         ]
     }
