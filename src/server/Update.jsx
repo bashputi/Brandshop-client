@@ -7,7 +7,7 @@ const Update = () => {
     const { _id } = brand;
 
     const handleUpdate = e => {
-        e.preventdefault();
+        e.preventDefault();
 
         const img = e.target.img.value;
         const name = e.target.name.value;
@@ -31,7 +31,7 @@ const Update = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            if(data.insertedId) {
+            if(data.matchedCount) {
                 Swal.fire({
                     title: 'success!!',
                     text: 'Product Updated Successfully',
