@@ -4,8 +4,9 @@ import NotFound from "../Pages/NotFound";
 import Home from "../Pages/Home";
 import Register from "../../Components/Register";
 import Login from "../../Components/Login";
-import PrivateRoute from "../PrivateRoute";
 import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
+import AddProduct from "../Pages/AddProduct";
+import PrivateRoute from "../PrivateRoute";
 
 
 const myRouter = createBrowserRouter([
@@ -21,7 +22,7 @@ const myRouter = createBrowserRouter([
             },
             {
                 path: '/service/:id',
-                element: <PrivateRoute><ServiceDetails></ServiceDetails> </PrivateRoute> ,
+                element: <ServiceDetails></ServiceDetails> ,
                 loader: () => fetch('/brand.json')
             },
             {
@@ -31,6 +32,10 @@ const myRouter = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login></Login>
+            },
+            {
+                path: '/addProduct',
+                element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
             }
         ]
     }
