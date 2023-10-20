@@ -1,8 +1,19 @@
-# React + Vite
+# Client site live link
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- https://i.ibb.co/YhfCYXt/4k-car-g6a4f0e15hkua5oa.jpg
 
-Currently, two official plugins are available:
+# Feature of my project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- If the user in not logged in he/she can't enter into the private pages.
+
+- If a user log in to the website his/her image and name will appear in the nav bar.
+
+- "Add Product" and "My Cart" is a private route.
+
+- Clicking on the specific brand will open with it's products.
+
+- Clickink on the "Details" button will show it's details information and "Update" button will rederict to a page where he/she can update a products information.
+
+- "ADD TO CART" button will store it's information in the database.
+
+- "My Cart" will show his/her added products.
