@@ -21,7 +21,7 @@ const Update = () => {
 
         console.log(updataBrand);
 
-        fetch(`http://localhost:5001/brands/${_id}`, {
+        fetch(`https://brand-store-server-eksoft1p8-rimeislam672-gmailcom.vercel.app/brands/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

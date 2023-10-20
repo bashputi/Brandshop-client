@@ -11,7 +11,7 @@ const MyCart = () => {
 
    const handleDelete = _id => {
 console.log(_id);
-        const URL = `http://localhost:5001/carts/${_id}`;
+        const URL = `https://brand-store-server-eksoft1p8-rimeislam672-gmailcom.vercel.app/carts/${_id}`;
         fetch(URL, {
             method: "DELETE",
         })
@@ -41,7 +41,7 @@ console.log(_id);
                     <div className="card w-96 bg-base-100 shadow-xl image-full">
                     <figure><img src={user.img} alt="cars" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title">{name}</h2>
+                        <h2 className="card-title">{user.name}</h2>
                         <div className="flex">
                             <p>Price: {user.price}</p>
                             <p>Ratings: {user.rating}</p>

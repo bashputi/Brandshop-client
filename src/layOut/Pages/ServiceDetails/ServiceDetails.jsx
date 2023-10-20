@@ -10,22 +10,9 @@ const ServiceDetails = () => {
     const { img, name, description, type, price, rating} = details || {};
    
 const handleAddCart = async() => {
-    //  e.preventDefault();
-    
-    // console.log(details);
-
-    // try {
-    //     const response = await axios.post("http://localhost:5001/brands/cart", details, {
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //         },
-    //     });
-    //     console.log(response.data);
-    // } catch (error) {
-    //     console.log(error);
-    // }
+   
     try {
-        const res = await fetch("http://localhost:5001/carts", {
+        const res = await fetch("https://brand-store-server-eksoft1p8-rimeislam672-gmailcom.vercel.app/carts", {
             method: "POST",
                 headers: {
                     "Content-Type": "application/json",

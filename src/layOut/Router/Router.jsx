@@ -39,22 +39,22 @@ const myRouter = createBrowserRouter([
             {
                 path: '/mycart',
                 element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-                loader: () => fetch('http://localhost:5001/carts')
+                loader: () => fetch('https://brand-store-server-eksoft1p8-rimeislam672-gmailcom.vercel.app/carts')
             },
             {
                 path: '/service',
                 element: <DisplayBrand></DisplayBrand>,
-                loader: () => fetch(`http://localhost:5001/brands`)
+                loader: () => fetch(`https://brand-store-server-eksoft1p8-rimeislam672-gmailcom.vercel.app/brands`)
             },
             {
                 path: '/service/update/:id',
                 element: <PrivateRoute><Update></Update></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5001/brands/${params.id}`)
+                loader: ({params}) => fetch(`https://brand-store-server-eksoft1p8-rimeislam672-gmailcom.vercel.app/brands/${params.id}`)
             },
             {
                 path: '/service/details/:id',
                 element: <ServiceDetails></ServiceDetails>,
-                loader: ({params}) => fetch(`http://localhost:5001/brands/${params.id}`)
+                loader: ({params}) => fetch(`https://brand-store-server-eksoft1p8-rimeislam672-gmailcom.vercel.app/brands/${params.id}`)
             }
         ]
     }

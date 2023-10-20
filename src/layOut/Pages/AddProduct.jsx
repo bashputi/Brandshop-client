@@ -22,7 +22,7 @@ const AddProduct = () => {
 
 
          try {
-            const res = await fetch("http://localhost:5001/brands", {
+            const res = await fetch("https://brand-store-server-eksoft1p8-rimeislam672-gmailcom.vercel.app/brands", {
                 method: "POST",
                     headers: {
                         "Content-Type": "application/json",
