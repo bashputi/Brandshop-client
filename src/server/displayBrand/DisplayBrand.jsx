@@ -13,7 +13,7 @@ const DisplayBrand = () => {
     return (
         <div>
             <h1 className="text-center my-12 text-5xl" >Display Brand Product</h1>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:max-w-[80vw] lg:mx-auto ml-5">
                 {
                   brands.map(brand => <DisplayBrandCard key={brand._id} brand={brand} brands={brands} setBrands={setBrands} ></DisplayBrandCard>) 
                 }

@@ -10,10 +10,10 @@ const Home = () => {
     const services = useLoaderData();
     return (
         <div>
-            {/* <Banner></Banner>  */}
-            {/* <Extra></Extra>  */}
+            <Banner></Banner> 
+            <Extra></Extra> 
             <Services services={services}></Services>
-            {/* <ExtraOne></ExtraOne>  */}
+            <ExtraOne></ExtraOne>  
             <Footer></Footer>
         </div>
     );
