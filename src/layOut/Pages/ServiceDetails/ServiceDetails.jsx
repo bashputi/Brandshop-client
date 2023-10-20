@@ -12,7 +12,7 @@ const ServiceDetails = () => {
 const handleAddCart = async() => {
    
     try {
-        const res = await fetch("https://brand-store-server-eksoft1p8-rimeislam672-gmailcom.vercel.app/carts", {
+        const res = await fetch("https://brand-store-server-five.vercel.app/carts", {
             method: "POST",
                 headers: {
                     "Content-Type": "application/json",

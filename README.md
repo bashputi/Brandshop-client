@@ -1,6 +1,10 @@
 # Client site live link
 
-- https://brandsore-client.web.app/
+- https://brandsore-client.web.app
+
+# Server site live link
+
+- https://brand-store-server-five.vercel.app/
 
 
 # Feature of my project

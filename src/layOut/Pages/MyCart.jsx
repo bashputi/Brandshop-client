@@ -11,7 +11,7 @@ const MyCart = () => {
 
    const handleDelete = _id => {
 console.log(_id);
-        const URL = `https://brand-store-server-eksoft1p8-rimeislam672-gmailcom.vercel.app/carts/${_id}`;
+        const URL = `https://brand-store-server-five.vercel.app/carts/${_id}`;
         fetch(URL, {
             method: "DELETE",
         })
@@ -35,7 +35,7 @@ console.log(_id);
             <h1 className="text-5xl my-12 text-center">Product You Addeed </h1>
             <div className="grid grid-cols-1 lg:grid-cols-3 lg:max-w-[70vw] mx-auto gap-5">
                 {
-                   updateUser.map((user) => (
+                  updateUser.length && updateUser.map((user) => (
 
                     <div key={user._id} className="flex justify-center">
                     <div className="card w-96 bg-base-100 shadow-xl image-full">

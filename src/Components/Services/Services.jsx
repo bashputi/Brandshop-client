@@ -9,7 +9,7 @@ const Services = ({services}) => {
                 <p></p>
                 <div className="grid grid-cols-2 lg:grid-cols-6 gap-2 lg:gap-5">
                     {
-                        services?.map(service => <ServicesCard key={service.id} service={service}></ServicesCard>)
+                        services.map(service => <ServicesCard key={service.id} service={service}></ServicesCard>)
                     }
                 </div>
             </div>
