@@ -1,14 +1,58 @@
+
+
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 
 const ServiceDetails = () => {
     const details = useLoaderData();
-    const {_id, img, name, description, type, price, rating} = details || {};
+    const { img, name, description, type, price, rating} = details || {};
    
+const handleAddCart = async() => {
+    //  e.preventDefault();
+    
+    // console.log(details);
 
-  
+    // try {
+    //     const response = await axios.post("http://localhost:5001/brands/cart", details, {
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //         },
+    //     });
+    //     console.log(response.data);
+    // } catch (error) {
+    //     console.log(error);
+    // }
+    try {
+        const res = await fetch("http://localhost:5001/carts", {
+            method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(details),
+        });
+        const data = res.json();
+        console.log(data);
+            if(data){
+                Swal.fire({
+                    title: 'success!!',
+                    text: 'Do you want to continue',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  });
+            }
+        
+    } catch (error) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong!',
+          });
+    }
 
+
+};
 
     return (
         <div className="flex h-[90vh] justify-center items-center">
@@ -25,7 +69,7 @@ const ServiceDetails = () => {
                           <p>Ratings: {rating}</p>    
                 </div>
                 <p className="py-6">{description}</p>
-                <button className="btn btn-primary">ADD to Cart</button>
+                <button onClick={handleAddCart} className="btn btn-primary">ADD to Cart</button>
                 </div>
           
             </div>

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
 
-const DisplayBrandCard = ({brand, brands, setBrands}) => {
-    const {_id, img, name, brand_name, type, price, rating} = brand;
+const DisplayBrandCard = ({brand}) => {
+    const {_id, img, name , type, price, rating} = brand || {};
     return (
        
             <div className="card card-compact w-96 bg-base-100 shadow-xl">
@@ -13,7 +13,7 @@ const DisplayBrandCard = ({brand, brands, setBrands}) => {
                 <p className="font-semibold">Price: <span className="text-red-700">{price}</span> USD</p>
                 <p className="font-semibold">Ratings: <span className="text-green-600">{rating}</span> </p>
                 <div className="card-actions justify-end">
-                <Link to={`update/${_id}`}><button className="btn bg-green-500">Update</button></Link>
+                 <Link to={`update/${_id}`}><button className="btn bg-green-500">Update</button></Link> 
                 <Link to={`details/${_id}`}><button className="btn btn-primary">Details</button></Link>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 import axios from "axios";
+import Swal from "sweetalert2";
 
 
 const AddProduct = () => {
@@ -19,15 +20,32 @@ const AddProduct = () => {
 
         console.log(myData);
 
-        try {
-            const response = await axios.post("http://localhost:5001/brands", myData, {
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+
+         try {
+            const res = await fetch("http://localhost:5001/brands", {
+                method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(myData)
             });
-            console.log(response.data);
+            const data = await res.json();
+            console.log(data);
+                if(data.insertedId){
+                    Swal.fire({
+                        title: 'success!!',
+                        text: 'Do you want to continue',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                      })
+                }
+            
         } catch (error) {
-            console.log(error.message);
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+              })
         }
 
     };

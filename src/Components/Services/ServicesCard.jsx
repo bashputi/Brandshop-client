@@ -5,7 +5,7 @@ const ServicesCard = ({service}) => {
     const { brand_name, brand_image} = service || {};
     return (
         <div>
-            <Link to={`/service/${brand_name}`}>
+            <Link to={`/service`}>
             <div className="card card-compact w-[200px] bg-base-100 shadow-xl">
               <figure><img className="w-[200px] h-[150px]" src={brand_image} alt="Shoes" /></figure>
                 <div className="card-body">
