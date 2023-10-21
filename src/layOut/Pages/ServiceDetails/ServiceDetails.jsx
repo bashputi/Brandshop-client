@@ -1,11 +1,12 @@
 
-
+import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
-
+import AuthProvider from "../AuthProvider";
 
 
 const ServiceDetails = () => {
+   
     const details = useLoaderData();
     const { img, name, description, type, price, rating} = details || {};
    
@@ -44,7 +45,7 @@ const handleAddCart = async() => {
     return (
         <div className="flex h-[90vh] justify-center items-center">
            
-            <div className="hero lg:max-w-[90vw] min-h-[70vh] bg-lime-100 ">
+            <div className="hero lg:max-w-[90vw] min-h-[70vh] bg--200 ">
           
             <div className="hero-content flex-col lg:flex-row">
                 <img src={img} className="max-w-[380px] lg:max-w-[600px] rounded-lg shadow-2xl" />
@@ -56,7 +57,7 @@ const handleAddCart = async() => {
                           <p>Ratings: {rating}</p>    
                 </div>
                 <p className="py-6">{description}</p>
-                <button onClick={handleAddCart} className="btn btn-primary">ADD to Cart</button>
+                <button onClick={handleAddCart} className="btn text-white bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ...">ADD to Cart</button>
                 </div>
           
             </div>

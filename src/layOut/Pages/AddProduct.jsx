@@ -124,7 +124,7 @@ const AddProduct = () => {
                         </div>
 
                         <div className="form-control mt-6">
-                        <button className="btn btn-primary">Add Product</button>
+                        <button className="btn text-white bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ...">Add Product</button>
                         </div>
                     </form>
                     </div>

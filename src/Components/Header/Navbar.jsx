@@ -18,10 +18,8 @@ const Navbar = () => {
     document.querySelector("html").setAttribute("data-theme", localTheme);
    },[theme]); 
  
-
-
     const { user, logOut } = useContext(AuthContext);
-
+    
     const navLinks = <>
            <li className="text-xl font-semibold"><NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-[#FF444A] underline" : "" }>Home</NavLink></li>
            <li className="text-xl font-semibold"><NavLink to="/addProduct" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-[#FF444A] underline" : "" }>Add Product</NavLink></li>
@@ -79,11 +77,11 @@ const Navbar = () => {
                     
                     </div>
                     
-                    <a onClick={logOut} className="btn btn-sm text-sm lg:text-2xl font-bold">Log out</a>
+                    <a onClick={logOut} className="btn btn-sm text-white bg-gradient-to-r from-green-400 hover:to-blue-500 hover:from-pink-500 to-yellow-500 ... text-sm lg:text-2xl font-bold">Log out</a>
                 </> 
                     :
                     <Link to="/login">
-                        <button className="btn btn-sm btn-ghost text-sm lg:text-2xl font-bold">Login</button>
+                        <button className="btn btn-sm  text-white bg-gradient-to-r hover:to-green-400 from-blue-500 to-pink-500 hover:from-yellow-500 ... text-sm lg:text-2xl font-bold">Login</button>
                     </Link>
                 }
                  

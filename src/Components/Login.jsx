@@ -20,7 +20,7 @@ const Login = () => {
 
         signIn(email, password)
         .then(result => {
-            console.log(result.user)
+            console.log(result)
             setSuccess('User Logged in Successfully.')
             e.target.reset();
             navigate('/');
@@ -68,7 +68,7 @@ const Login = () => {
                         
                         </div>
                         <div className="form-control mt-6">
-                        <button className="btn btn-primary">Login</button>
+                        <button className="btn  text-white bg-gradient-to-r from-green-400 hover:from-blue-500 to-pink-500 hover:to-yellow-500 ...">Login</button>
                         </div>
                     </form>
                     {
@@ -80,7 +80,7 @@ const Login = () => {
                     <p className="ml-4">New to this site? Please <Link to="/register">
                         <button className="btn btn-link">Register</button>
                         </Link></p>
-                        <p className="ml-8"><button onClick={handleGoogleSignIn} className="btn btn-success mb-4 ml-4">Signin with Google</button></p>
+                        <p className="ml-8"><button onClick={handleGoogleSignIn} className="btn text-white bg-gradient-to-r from-green-400 hover:to-blue-500 hover:from-pink-500 to-yellow-500 ... mb-4 ml-4">Signin with Google</button></p>
                     </div>
                 </div>
              </div>

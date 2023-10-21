@@ -4,7 +4,6 @@ import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
-
 const MyCart = () => {
     const loadedCarts = useLoaderData();
     const [updateUser, setUpdateUser] = useState(loadedCarts);
@@ -47,7 +46,7 @@ console.log(_id);
                             <p>Ratings: {user.rating}</p>
                         </div>
                         <div className="card-actions mt-24 justify-end">
-                        <button onClick={() => handleDelete(user._id)} className="btn btn-primary">Delete</button>
+                        <button onClick={() => handleDelete(user._id)} className="btn text-white bg-gradient-to-r hover:from-green-400 hover:to-blue-500 from-pink-500 to-yellow-500 ...">Delete</button>
                         </div>
                     </div>
                     </div>
@@ -64,4 +63,3 @@ console.log(_id);
 
 export default MyCart;
 
-{/* <MyCartCard key={cart._id} cart={cart} carts={carts} setCarts={setCarts}></MyCartCard>  */}

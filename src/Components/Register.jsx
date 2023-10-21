@@ -81,7 +81,7 @@ const Register = () => {
                         <input type="text" name="img" placeholder="Provide a image url" className="input input-bordered" required />
                         </div>
                         <div className="form-control mt-6">
-                        <button className="btn btn-primary">Register</button>
+                        <button className="btn text-white bg-gradient-to-r from-green-400 hover:to-blue-500 hover:from-pink-500 to-yellow-500 ...">Register</button>
                         </div>
                     </form>
                     {

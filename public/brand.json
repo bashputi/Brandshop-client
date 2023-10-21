@@ -10,9 +10,9 @@
       "brand_image": "https://i.ibb.co/0GJ7ctM/download.jpg"
     },
     {
-      "id": 3,
-      "brand_name": "bmw",
-      "brand_image": "https://i.ibb.co/bdVtGBq/BMW-logo.jpg"
+      "id": 5,
+      "brand_name": "tesla",
+      "brand_image": "https://i.ibb.co/4stZp1h/TESLA-LOGO.webp"
     },
     {
       "id": 4,
@@ -20,9 +20,9 @@
       "brand_image": "https://i.ibb.co/v1M1wC9/mercedes-square.webp"
     },
     {
-      "id": 5,
-      "brand_name": "tesla",
-      "brand_image": "https://i.ibb.co/4stZp1h/TESLA-LOGO.webp"
+      "id": 3,
+      "brand_name": "bmw",
+      "brand_image": "https://i.ibb.co/bdVtGBq/BMW-logo.jpg"
     },
     {
       "id": 6,
@@ -30,3 +30,4 @@
       "brand_image": "https://i.ibb.co/zQqmtVc/ghows-OH-a6f37397-c8e8-4179-8585-5ee3f80ce062-af0cbbc5.webp"
     }
   ]
+  
