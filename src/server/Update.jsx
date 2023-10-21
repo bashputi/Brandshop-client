@@ -43,8 +43,6 @@ const Update = () => {
 
     };
 
-
-
     return (
         <div >
              

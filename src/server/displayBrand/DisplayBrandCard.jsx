@@ -23,3 +23,5 @@ const DisplayBrandCard = ({brand}) => {
 };
 
 export default DisplayBrandCard;
+
+ 

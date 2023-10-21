@@ -42,17 +42,17 @@ const myRouter = createBrowserRouter([
                 loader: () => fetch('https://brand-store-server-five.vercel.app/carts')
             },
             {
-                path: '/service',
+                path: '/:brand_name',
                 element: <DisplayBrand></DisplayBrand>,
                 loader: () => fetch(`https://brand-store-server-five.vercel.app/brands`)
             },
             {
-                path: '/service/update/:id',
+                path: '/:brand_name/update/:id',
                 element: <PrivateRoute><Update></Update></PrivateRoute>,
                 loader: ({params}) => fetch(`https://brand-store-server-five.vercel.app/brands/${params.id}`)
             },
             {
-                path: '/service/details/:id',
+                path: '/:brand_name/details/:id',
                 element: <ServiceDetails></ServiceDetails>,
                 loader: ({params}) => fetch(`https://brand-store-server-five.vercel.app/brands/${params.id}`)
             }
