@@ -1,0 +1,17 @@
+#main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+   
+    
+  }
+  #fs {
+    width: 100%;
+    height: 100vh;
+    background: #d0ab06;
+  }
+  #elem {
+    width: 100%;
+    height: 300px;
+    background-color: rgb(27, 78, 167);
+  }

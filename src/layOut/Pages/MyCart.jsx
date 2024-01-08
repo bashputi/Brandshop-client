@@ -2,10 +2,13 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import PropTypes from 'prop-types';
+
 
 
 const MyCart = () => {
     const loadedCarts = useLoaderData();
+  
     const [updateUser, setUpdateUser] = useState(loadedCarts);
 
    const handleDelete = _id => {
@@ -34,6 +37,8 @@ console.log(_id);
             <h1 className="text-5xl my-12 text-center">Product You Addeed </h1>
             <div className="grid grid-cols-1 lg:grid-cols-3 lg:max-w-[70vw] mx-auto gap-5">
                 {
+            
+
                   updateUser.length && updateUser.map((user) => (
 
                     <div key={user._id} className="flex justify-center">
@@ -62,4 +67,9 @@ console.log(_id);
 };
 
 export default MyCart;
+MyCart.propTypes = {
+    updateUser: PropTypes.node,
+    setUpdateUser: PropTypes.node,
+    user: PropTypes.node,
+}
 
